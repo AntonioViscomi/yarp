@@ -2339,7 +2339,7 @@ bool PartItem::updatePart()
     if (m_iPos)
     {
         bool boolval = true;
-        m_iPos->checkMotionDone(m_slow_k, &boolval); // using k to save bandwidth
+        ret_motdone = m_iPos->checkMotionDone(m_slow_k, &boolval); // using k to save bandwidth
         m_done[m_slow_k] = boolval;
     }
     if (m_ijointbrake)
